@@ -1,5 +1,4 @@
 # PFT-Extractor
-<<<<<<< HEAD
 
 This app takes VMAX PFT reports in PDF form and extracts useful pulmonary health data into individual and mean tables. Point the app to the directory with PDF files.
 
@@ -29,7 +28,7 @@ Required ibraries download automatically
 
 ## Authors
 
-* **Lindsey Boulet** 
+* **Lindsey M Boulet** 
 
 ## License
 
@@ -38,5 +37,5 @@ This project is licensed under the MIT License - see the [license.md](license.md
 
 =======
 App that parses PFT data from PDF reports
->>>>>>> ef38a6c5294e4e0ea8fae540d434731511afb6aa
+
 # PFT-Extractor
