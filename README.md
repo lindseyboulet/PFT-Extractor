@@ -34,8 +34,4 @@ Required ibraries download automatically
 
 This project is licensed under the MIT License - see the [license.md](license.md) file for details
 
-
-=======
-App that parses PFT data from PDF reports
-
 # PFT-Extractor
