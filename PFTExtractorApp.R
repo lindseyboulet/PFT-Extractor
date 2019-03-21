@@ -21,13 +21,13 @@ ui <- dashboardPage(title="PFT Data Extractor",
                         column(2, uiOutput('fileChoose')),
                         column(4, uiOutput('pftID'))
                       ),
-                      uiOutput('heading'),
+                      fluidRow(uiOutput('heading')),
                       fluidRow(
-                        column(6,
+                        column(5, offset = 1,
                                withSpinner(tableOutput("pftMean"),
                                            type = getOption("spinner.type", default = 6))
                         ),
-                        column(6,
+                        column(5,
                                tableOutput("pftInd")
                         )
                       ),
@@ -52,8 +52,8 @@ server <- function(input, output) {
   output$heading <- renderUI({
     validate(need(!is.null(vals$dir), ''))
     fluidRow(
-    column(6, h3("Mean Data")),
-    column(6, h3("Individual Data")))
+    column(5, offset = 1,  h3("Mean Data")),
+    column(5, h3("Individual Data")))
   })
   output$pftID <- renderUI({
     validate(need(!is.null(vals$dir), ''))
@@ -90,7 +90,7 @@ server <- function(input, output) {
   output$buttons <- renderUI({
     validate(need(!is.null(vals$dir), ''))
     fluidRow(
-    column(6, downloadButton("meanDl", "Mean Data File")),
+    column(5, offset = 1,  downloadButton("meanDl", "Mean Data File")),
     column(2, downloadButton("indDl", "Current Individual File")),
     column(2, downloadButton("indDlall", "All Individual Files"))
   )
